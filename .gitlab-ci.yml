@@ -4,9 +4,7 @@ stages:
 build_project:
   stage: build
   script:
-    - xcodebuild clean -project SampleContinousIntegration.xcodeproj -scheme SchemeName | xcpretty
-    - xcodebuild test -project SampleContinousIntegration.xcodeproj -scheme SchemeName -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.2' | xcpretty -s
+    - xcodebuild clean -project TestContinousIntegration.xcodeproj -scheme TestContinousIntegration | xcpretty
+    - xcodebuild test -project TestContinousIntegration.xcodeproj -scheme TestContinousIntegration -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.2' | xcpretty -s
   tags:
-    - ios_9-2
-    - xcode_7-2
-    - osx_10-11
+    - ios
