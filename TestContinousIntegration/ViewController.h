@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+-(NSString *)reverseString:(NSString *) sampleString;
 
 @end
 

@@ -7,15 +7,19 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "ViewController.h"
 
 @interface TestContinousIntegrationTests : XCTestCase
-
+@property (nonatomic) ViewController *vcToTest;
 @end
 
 @implementation TestContinousIntegrationTests
 
 - (void)setUp {
     [super setUp];
+    self.vcToTest = [[ViewController alloc] init];
+
+    [self testValueForNewViewController];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
@@ -24,16 +28,13 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
+- (void) testValueForNewViewController {
+    NSString *originalString = @"himynameisandy";
+    NSString *reversedString = [self.vcToTest reverseString:originalString];
+    
+    NSString *expectedReversedString = @"ydnasiemanymih";
+    XCTAssertEqualObjects(expectedReversedString, reversedString);
+   }
 
 @end
