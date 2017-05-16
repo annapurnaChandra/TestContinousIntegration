@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9EA7E1511EC07B0D00E69055 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA7E1501EC07B0C00E69055 /* LoginViewController.m */; };
 		9ED805F71EBB320C006A5F7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED805F61EBB320C006A5F7D /* main.m */; };
 		9ED805FA1EBB320C006A5F7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED805F91EBB320C006A5F7D /* AppDelegate.m */; };
 		9ED805FD1EBB320C006A5F7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED805FC1EBB320C006A5F7D /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9EA7E14F1EC07B0A00E69055 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		9EA7E1501EC07B0C00E69055 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		9ED805F21EBB320C006A5F7D /* TestContinousIntegration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestContinousIntegration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED805F61EBB320C006A5F7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9ED805F81EBB320C006A5F7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 		9ED805E91EBB320C006A5F7D = {
 			isa = PBXGroup;
 			children = (
+				9EA7E14F1EC07B0A00E69055 /* LoginViewController.h */,
+				9EA7E1501EC07B0C00E69055 /* LoginViewController.m */,
 				9ED805F41EBB320C006A5F7D /* TestContinousIntegration */,
 				9ED8060E1EBB320C006A5F7D /* TestContinousIntegrationTests */,
 				9ED806191EBB320D006A5F7D /* TestContinousIntegrationUITests */,
@@ -273,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA7E1511EC07B0D00E69055 /* LoginViewController.m in Sources */,
 				9ED805FD1EBB320C006A5F7D /* ViewController.m in Sources */,
 				9ED805FA1EBB320C006A5F7D /* AppDelegate.m in Sources */,
 				9ED805F71EBB320C006A5F7D /* main.m in Sources */,
