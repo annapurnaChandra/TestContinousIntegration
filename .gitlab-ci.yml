@@ -1,12 +1,28 @@
 stages:
   - build
-
-build_project:
+  - archive
+  
+build_code:
   stage: build
   script:
     - xcodebuild clean -project TestContinousIntegration.xcodeproj -scheme TestContinousIntegration | xcpretty
-    - xcodebuild test -project TestContinousIntegration.xcodeproj -scheme TestContinousIntegration -destination 'platform=iOS Simulator,name=iPhone 6s,OS=9.2' | xcpretty -s
+    - xcodebuild test -project TestContinousIntegration.xcodeproj -scheme TestContinousIntegration -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.3' | xcpretty -s
+
   tags:
-    - ios_9-2
+    - ios_10-3
+    - xcode_8-3-1
+    - osx_10-12
+    
+archive_project:
+    stage: archive
+    script:
+    - xcodebuild clean archive -archivePath "builds/TestContinousIntegration" -scheme TestContinousIntegration
+    - xcodebuild -exportArchive -archivePath "builds/TestContinousIntegration.xcarchive" -exportPath "builds/TestContinousIntegration.ipa" -exportOptionsPlist "TestContinousIntegration/info.plist"
+  
+    only:
+    - master
+    
+    tags:
+    - ios_10-3
     - xcode_8-3-1
     - osx_10-12
